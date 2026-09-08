@@ -37,7 +37,7 @@ async function populateMatches() {
     teamIdByName[row.name] = row.id;
   }
 
-  let inserted = 0;
+  let upserted = 0;
   for (const match of data.matches) {
     const homeId = teamIdByName[match.homeTeam.name];
     const awayId = teamIdByName[match.awayTeam.name];
@@ -47,9 +47,15 @@ async function populateMatches() {
 
     await pool.query(
       `INSERT INTO matches
-        (home_team_id, away_team_id, stage, matchday, match_date, home_score, away_score, status)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+        (api_match_id, home_team_id, away_team_id, stage, matchday, match_date, home_score, away_score, status)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+       ON CONFLICT (api_match_id) DO UPDATE SET
+         home_score = EXCLUDED.home_score,
+         away_score = EXCLUDED.away_score,
+         status = EXCLUDED.status,
+         match_date = EXCLUDED.match_date`,
       [
+        match.id,
         homeId,
         awayId,
         stage,
@@ -60,9 +66,9 @@ async function populateMatches() {
         match.status
       ]
     );
-    inserted++;
+    upserted++;
   }
-  console.log(`Inserted ${inserted} matches.`);
+  console.log(`Upserted ${upserted} matches.`);
 }
 
 async function main() {

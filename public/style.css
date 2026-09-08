@@ -94,3 +94,6 @@ tbody tr:hover {
 .vs, .score { color: #888; font-weight: bold; padding: 0 12px; }
 .score { color: #fff; }
 .empty-note { text-align: center; color: #888; }
+
+.match-card-live { border-color: #ff4444; }
+.live-badge { color: #ff4444; font-weight: bold; letter-spacing: 0.5px; }

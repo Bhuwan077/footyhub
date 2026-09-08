@@ -25,10 +25,13 @@ router.get('/matches', async (req, res) => {
       ORDER BY m.match_date ASC;
     `;
     const result = await pool.query(query);
-    const upcoming = result.rows.filter(m => m.status !== 'FINISHED');
+
+    const LIVE_STATUSES = ['IN_PLAY', 'PAUSED', 'LIVE'];
+    const live = result.rows.filter(m => LIVE_STATUSES.includes(m.status));
+    const upcoming = result.rows.filter(m => !LIVE_STATUSES.includes(m.status) && m.status !== 'FINISHED');
     const finished = result.rows.filter(m => m.status === 'FINISHED').reverse();
 
-    res.render('ucl/matches', { tabs: TABS, active: 'matches', upcoming, finished });
+    res.render('ucl/matches', { tabs: TABS, active: 'matches', live, upcoming, finished });
   } catch (err) {
     console.error(err);
     res.status(500).send('Error loading matches');
