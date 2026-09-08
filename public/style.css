@@ -45,3 +45,52 @@ th {
 tbody tr:hover {
   background: #1a1a1a;
 }
+
+/* --- Homepage league grid --- */
+.subtitle { text-align: center; color: #999; margin-top: -20px; }
+
+.league-grid {
+  max-width: 700px; margin: 30px auto; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+}
+
+.league-card {
+  display: block; background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 8px;
+  padding: 20px; text-align: center; color: #f0f0f0; text-decoration: none;
+  font-weight: bold; transition: background 0.15s;
+}
+
+.league-card:hover { background: #262626; }
+.league-card-disabled { opacity: 0.5; cursor: not-allowed; }
+
+.soon-badge { display: block; font-size: 0.7em; font-weight: normal; color: #888; margin-top: 6px; }
+.home-link { color: #f0f0f0; text-decoration: none; }
+
+/* --- Tabs --- */
+.tabs {
+  display: flex; justify-content: center; gap: 30px;
+  border-bottom: 1px solid #2a2a2a; margin-bottom: 30px;
+}
+
+.tab {
+  padding: 14px 4px; color: #999; text-decoration: none; font-size: 0.85em;
+  font-weight: bold; letter-spacing: 0.5px; border-bottom: 2px solid transparent;
+}
+
+.tab-active { color: #fff; border-bottom-color: #4f9dff; }
+
+/* --- Match cards --- */
+.section-heading { max-width: 700px; margin: 30px auto 10px; font-size: 1em; color: #999; text-transform: uppercase; }
+.match-list { max-width: 700px; margin: 0 auto; }
+
+.match-card {
+  background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 8px;
+  padding: 14px 18px; margin-bottom: 10px;
+}
+
+.match-date { font-size: 0.8em; color: #888; margin-bottom: 8px; }
+.match-teams { display: flex; align-items: center; justify-content: space-between; }
+.team { display: flex; align-items: center; gap: 8px; flex: 1; }
+.vs, .score { color: #888; font-weight: bold; padding: 0 12px; }
+.score { color: #fff; }
+.empty-note { text-align: center; color: #888; }

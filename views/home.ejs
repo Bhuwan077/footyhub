@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FootyHub</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>FootyHub</h1>
+  <p class="subtitle">Pick a competition</p>
+
+  <div class="league-grid">
+    <% leagues.forEach(league => { %>
+      <% if (league.active) { %>
+        <a href="/<%= league.slug %>" class="league-card">
+          <%= league.name %>
+        </a>
+      <% } else { %>
+        <div class="league-card league-card-disabled">
+          <%= league.name %>
+          <span class="soon-badge">Coming soon</span>
+        </div>
+      <% } %>
+    <% }) %>
+  </div>
+</body>
+</html>

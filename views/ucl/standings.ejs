@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FootyHub — UCL Standings</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><a href="/" class="home-link">FootyHub</a> — Champions League</h1>
+  <%- include('../partials/tabs', { tabs, active }) %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% standings.forEach((team, i) => { %>
+        <tr>
+          <td><%= i + 1 %></td>
+          <td class="team-cell">
+            <% if (team.logo_url) { %><img src="<%= team.logo_url %>" alt="<%= team.name %>" class="team-logo"><% } %>
+            <%= team.name %>
+          </td>
+          <td><%= team.played %></td>
+          <td><%= team.won %></td>
+          <td><%= team.drawn %></td>
+          <td><%= team.lost %></td>
+          <td><%= team.goals_for %></td>
+          <td><%= team.goals_against %></td>
+          <td><%= team.goal_difference %></td>
+          <td><strong><%= team.points %></strong></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

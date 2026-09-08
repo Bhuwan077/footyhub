@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FootyHub — UCL Matches</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><a href="/" class="home-link">FootyHub</a> — Champions League</h1>
+  <%- include('../partials/tabs', { tabs, active }) %>
+
+  <h2 class="section-heading">Upcoming Fixtures</h2>
+  <div class="match-list">
+    <% if (upcoming.length === 0) { %><p class="empty-note">No upcoming matches.</p><% } %>
+    <% upcoming.forEach(m => { %>
+      <div class="match-card">
+        <div class="match-date">
+          <%= new Date(m.match_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) %>
+          &middot;
+          <%= new Date(m.match_date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) %>
+        </div>
+        <div class="match-teams">
+          <span class="team">
+            <% if (m.home_logo) { %><img src="<%= m.home_logo %>" class="team-logo"><% } %>
+            <%= m.home_team %>
+          </span>
+          <span class="vs">vs</span>
+          <span class="team">
+            <% if (m.away_logo) { %><img src="<%= m.away_logo %>" class="team-logo"><% } %>
+            <%= m.away_team %>
+          </span>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+  <h2 class="section-heading">Results</h2>
+  <div class="match-list">
+    <% if (finished.length === 0) { %><p class="empty-note">No finished matches yet.</p><% } %>
+    <% finished.forEach(m => { %>
+      <div class="match-card">
+        <div class="match-date">
+          <%= new Date(m.match_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) %>
+        </div>
+        <div class="match-teams">
+          <span class="team">
+            <% if (m.home_logo) { %><img src="<%= m.home_logo %>" class="team-logo"><% } %>
+            <%= m.home_team %>
+          </span>
+          <span class="score"><%= m.home_score %> - <%= m.away_score %></span>
+          <span class="team">
+            <% if (m.away_logo) { %><img src="<%= m.away_logo %>" class="team-logo"><% } %>
+            <%= m.away_team %>
+          </span>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

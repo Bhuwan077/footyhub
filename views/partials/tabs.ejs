@@ -1,0 +1,7 @@
+<nav class="tabs">
+  <% tabs.forEach(tab => { %>
+    <a href="<%= tab.href %>" class="tab <%= active === tab.key ? 'tab-active' : '' %>">
+      <%= tab.label.toUpperCase() %>
+    </a>
+  <% }) %>
+</nav>

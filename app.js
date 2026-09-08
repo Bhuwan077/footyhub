@@ -14,7 +14,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Test route — confirms DB connection works
 const indexRouter = require('./routes/index');
+const uclRouter = require('./routes/ucl');
+
 app.use('/', indexRouter);
+app.use('/ucl', uclRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
