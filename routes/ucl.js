@@ -119,4 +119,19 @@ router.get('/stats', async (req, res) => {
   }
 });
 
+router.get('/players', async (req, res) => {
+  try {
+    const result = await pool.query(`
+      SELECT p.name, p.position, p.jersey_number, t.name AS team_name
+      FROM players p
+      JOIN teams t ON t.id = p.team_id
+      ORDER BY t.name ASC, p.jersey_number ASC NULLS LAST;
+    `);
+    res.json({ players: result.rows });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load players' });
+  }
+});
+
 module.exports = router;
