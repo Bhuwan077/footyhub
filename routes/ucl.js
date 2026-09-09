@@ -69,4 +69,54 @@ router.get('/standings', async (req, res) => {
   }
 });
 
+router.get('/stats', async (req, res) => {
+  try {
+    const goals = await pool.query(`
+      SELECT player_name, team_name, COUNT(*) AS count
+      FROM match_events
+      WHERE event_type IN ('Goal', 'Penalty')
+      GROUP BY player_name, team_name
+      ORDER BY count DESC
+      LIMIT 20;
+    `);
+
+    const assists = await pool.query(`
+      SELECT assisting_player_name AS player_name, team_name, COUNT(*) AS count
+      FROM match_events
+      WHERE event_type = 'Goal' AND assisting_player_name IS NOT NULL
+      GROUP BY assisting_player_name, team_name
+      ORDER BY count DESC
+      LIMIT 20;
+    `);
+
+    const yellowCards = await pool.query(`
+      SELECT player_name, team_name, COUNT(*) AS count
+      FROM match_events
+      WHERE event_type = 'Yellow Card'
+      GROUP BY player_name, team_name
+      ORDER BY count DESC
+      LIMIT 20;
+    `);
+
+    const redCards = await pool.query(`
+      SELECT player_name, team_name, COUNT(*) AS count
+      FROM match_events
+      WHERE event_type = 'Red Card'
+      GROUP BY player_name, team_name
+      ORDER BY count DESC
+      LIMIT 20;
+    `);
+
+    res.json({
+      goals: goals.rows,
+      assists: assists.rows,
+      yellowCards: yellowCards.rows,
+      redCards: redCards.rows
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load stats' });
+  }
+});
+
 module.exports = router;
