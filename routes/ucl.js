@@ -76,7 +76,7 @@ router.get('/stats', async (req, res) => {
       FROM match_events
       WHERE event_type IN ('Goal', 'Penalty')
       GROUP BY player_name, team_name
-      ORDER BY count DESC
+      ORDER BY count DESC, player_name ASC
       LIMIT 20;
     `);
 
@@ -85,7 +85,7 @@ router.get('/stats', async (req, res) => {
       FROM match_events
       WHERE event_type = 'Goal' AND assisting_player_name IS NOT NULL
       GROUP BY assisting_player_name, team_name
-      ORDER BY count DESC
+      ORDER BY count DESC, player_name ASC
       LIMIT 20;
     `);
 
@@ -94,7 +94,7 @@ router.get('/stats', async (req, res) => {
       FROM match_events
       WHERE event_type = 'Yellow Card'
       GROUP BY player_name, team_name
-      ORDER BY count DESC
+      ORDER BY count DESC, player_name ASC
       LIMIT 20;
     `);
 
@@ -103,7 +103,7 @@ router.get('/stats', async (req, res) => {
       FROM match_events
       WHERE event_type = 'Red Card'
       GROUP BY player_name, team_name
-      ORDER BY count DESC
+      ORDER BY count DESC, player_name ASC
       LIMIT 20;
     `);
 
