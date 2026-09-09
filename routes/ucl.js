@@ -2,15 +2,6 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db/db');
 
-const TABS = [
-  { key: 'matches', label: 'Matches', href: '/ucl/matches' },
-  { key: 'standings', label: 'Standings', href: '/ucl/standings' },
-  { key: 'stats', label: 'Stats', href: '/ucl/stats' },
-  { key: 'players', label: 'Players', href: '/ucl/players' }
-];
-
-router.get('/', (req, res) => res.redirect('/ucl/matches'));
-
 router.get('/matches', async (req, res) => {
   try {
     const query = `
@@ -26,15 +17,14 @@ router.get('/matches', async (req, res) => {
     `;
     const result = await pool.query(query);
 
-    const LIVE_STATUSES = ['IN_PLAY', 'PAUSED', 'LIVE'];
-    const live = result.rows.filter(m => LIVE_STATUSES.includes(m.status));
-    const upcoming = result.rows.filter(m => !LIVE_STATUSES.includes(m.status) && m.status !== 'FINISHED');
+    const live = result.rows.filter(m => m.status === 'IN_PLAY' || m.status === 'PAUSED');
+    const upcoming = result.rows.filter(m => m.status !== 'FINISHED' && m.status !== 'IN_PLAY' && m.status !== 'PAUSED');
     const finished = result.rows.filter(m => m.status === 'FINISHED').reverse();
 
-    res.render('ucl/matches', { tabs: TABS, active: 'matches', live, upcoming, finished });
+    res.json({ live, upcoming, finished });
   } catch (err) {
     console.error(err);
-    res.status(500).send('Error loading matches');
+    res.status(500).json({ error: 'Failed to load matches' });
   }
 });
 
@@ -72,19 +62,11 @@ router.get('/standings', async (req, res) => {
       ORDER BY points DESC, goal_difference DESC, goals_for DESC;
     `;
     const result = await pool.query(query);
-    res.render('ucl/standings', { tabs: TABS, active: 'standings', standings: result.rows });
+    res.json({ standings: result.rows });
   } catch (err) {
     console.error(err);
-    res.status(500).send('Error loading standings');
+    res.status(500).json({ error: 'Failed to load standings' });
   }
-});
-
-router.get('/stats', (req, res) => {
-  res.render('ucl/coming-soon', { tabs: TABS, active: 'stats', title: 'Stats' });
-});
-
-router.get('/players', (req, res) => {
-  res.render('ucl/coming-soon', { tabs: TABS, active: 'players', title: 'Players' });
 });
 
 module.exports = router;

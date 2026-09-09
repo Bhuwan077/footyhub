@@ -2,10 +2,14 @@ const express = require('express');
 const path = require('path');
 const pool = require('./db/db');
 const cron = require('node-cron');
+const cors = require('cors');
 const syncLiveMatches = require('./scripts/syncLive');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Enable CORS so the static frontend (different domain) can fetch this API
+app.use(cors());
 
 // View engine
 app.set('view engine', 'ejs');
@@ -19,7 +23,7 @@ const indexRouter = require('./routes/index');
 const uclRouter = require('./routes/ucl');
 
 app.use('/', indexRouter);
-app.use('/ucl', uclRouter);
+app.use('/api/ucl', uclRouter);
 
 // Sync live match scores/status every minute
 cron.schedule('* * * * *', () => {
