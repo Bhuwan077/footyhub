@@ -34,11 +34,11 @@ router.get('/standings', async (req, res) => {
       WITH team_matches AS (
         SELECT home_team_id AS team_id, home_score AS goals_for, away_score AS goals_against
         FROM matches
-        WHERE stage = 'LEAGUE_PHASE' AND status = 'FINISHED'
+        WHERE stage = 'LEAGUE_PHASE' AND status IN ('FINISHED', 'IN_PLAY', 'PAUSED')
         UNION ALL
         SELECT away_team_id AS team_id, away_score AS goals_for, home_score AS goals_against
         FROM matches
-        WHERE stage = 'LEAGUE_PHASE' AND status = 'FINISHED'
+        WHERE stage = 'LEAGUE_PHASE' AND status IN ('FINISHED', 'IN_PLAY', 'PAUSED')
       )
       SELECT
         t.id, t.name, t.logo_url,
