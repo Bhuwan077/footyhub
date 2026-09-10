@@ -134,4 +134,20 @@ router.get('/players', async (req, res) => {
   }
 });
 
+router.get('/matches/:id/lineup', async (req, res) => {
+  try {
+    const result = await pool.query(
+      `SELECT * FROM match_lineups WHERE match_id = $1`,
+      [req.params.id]
+    );
+    if (result.rows.length === 0) {
+      return res.status(404).json({ available: false, message: 'Lineup not yet available for this match.' });
+    }
+    res.json({ available: true, lineup: result.rows[0] });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load lineup' });
+  }
+});
+
 module.exports = router;

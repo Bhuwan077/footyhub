@@ -32,14 +32,28 @@ async function getAllHighlightlyMatches() {
   return all.filter(m => m.round?.startsWith('League Stage'));
 }
 
-const SUFFIX_WORDS = /\b(fc|cf|sk|kv|ac|afc|ssc|as|sc|osc|1907|balompié|balompie|rotterdam|clube|club|de|portugal)\b/g;
+const TEAM_ALIASES = {
+  'PAE AEK': 'AEK Athens FC',
+  'FC Bayern München': 'Bayern Munich'
+};
+
+const SUFFIX_WORDS = /\b(fc|cf|sk|kv|ac|afc|ssc|as|sc|osc|fk|fa|1907|balompié|balompie|rotterdam|clube|club|de|portugal)\b/g;
+
 function normalize(name) {
-  return name.toLowerCase().replace(SUFFIX_WORDS, '').replace(/[^a-z0-9]/g, '').trim();
+  const deaccented = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return deaccented.toLowerCase().replace(SUFFIX_WORDS, '').replace(/[^a-z0-9]/g, '').trim();
 }
-function namesMatch(a, b) {
-  const na = normalize(a);
-  const nb = normalize(b);
+
+function namesMatch(ourName, hlName) {
+  if (TEAM_ALIASES[ourName] && normalize(TEAM_ALIASES[ourName]) === normalize(hlName)) return true;
+  const na = normalize(ourName);
+  const nb = normalize(hlName);
   return na === nb || na.includes(nb) || nb.includes(na);
+}
+
+function daysApart(dateStrA, dateStrB) {
+  const diff = Math.abs(new Date(dateStrA) - new Date(dateStrB));
+  return diff / (1000 * 60 * 60 * 24);
 }
 
 async function main() {
@@ -63,9 +77,10 @@ async function main() {
 
       const match = hlMatches.find(hl => {
         const hlDate = hl.date?.slice(0, 10);
-        return hlDate === ourDate &&
-          namesMatch(ours.home_name, hl.homeTeam?.name || '') &&
-          namesMatch(ours.away_name, hl.awayTeam?.name || '');
+        const dateOk = daysApart(ourDate, hlDate) <= 1;
+        const homeOk = namesMatch(ours.home_name, hl.homeTeam?.name || '');
+        const awayOk = namesMatch(ours.away_name, hl.awayTeam?.name || '');
+        return dateOk && homeOk && awayOk;
       });
 
       if (match) {

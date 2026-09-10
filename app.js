@@ -4,6 +4,7 @@ const pool = require('./db/db');
 const cron = require('node-cron');
 const cors = require('cors');
 const syncLiveMatches = require('./scripts/syncLive');
+const syncLineups = require('./scripts/syncLineups');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -28,6 +29,11 @@ app.use('/api/ucl', uclRouter);
 // Sync live match scores/status every minute
 cron.schedule('* * * * *', () => {
   syncLiveMatches().catch(err => console.error('Cron sync failed:', err.message));
+});
+
+// Sync lineups every 5 minutes (lineups only publish ~40 min before kickoff)
+cron.schedule('*/5 * * * *', () => {
+  syncLineups().catch(err => console.error('Lineup sync failed:', err.message));
 });
 
 app.listen(PORT, () => {
