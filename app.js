@@ -22,9 +22,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 const indexRouter = require('./routes/index');
 const uclRouter = require('./routes/ucl');
+const footballRouter = require('./routes/football');
 
 app.use('/', indexRouter);
 app.use('/api/ucl', uclRouter);
+app.use('/api/football', footballRouter);
 
 // Sync live match scores/status every minute
 cron.schedule('* * * * *', () => {
