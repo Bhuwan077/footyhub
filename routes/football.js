@@ -1,0 +1,88 @@
+const express = require('express');
+const router = express.Router();
+const pool = require('../db/db');
+
+const VALID_COMPETITIONS = ['UCL', 'EPL'];
+
+router.get('/matches', async (req, res) => {
+  const competition = VALID_COMPETITIONS.includes(req.query.competition) ? req.query.competition : 'UCL';
+
+  try {
+    const query = `
+      SELECT
+        m.id, m.match_date, m.stage, m.matchday, m.status,
+        m.home_score, m.away_score,
+        ht.name AS home_team, ht.logo_url AS home_logo,
+        at.name AS away_team, at.logo_url AS away_logo
+      FROM matches m
+      JOIN teams ht ON ht.id = m.home_team_id
+      JOIN teams at ON at.id = m.away_team_id
+      WHERE m.competition = $1
+      ORDER BY m.match_date ASC;
+    `;
+    const result = await pool.query(query, [competition]);
+
+    const live = result.rows.filter(m => m.status === 'IN_PLAY' || m.status === 'PAUSED');
+    const upcoming = result.rows.filter(m => m.status !== 'FINISHED' && m.status !== 'IN_PLAY' && m.status !== 'PAUSED');
+    const finished = result.rows.filter(m => m.status === 'FINISHED').reverse();
+
+    res.json({ live, upcoming, finished });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load matches' });
+  }
+});
+
+router.get('/standings', async (req, res) => {
+  const competition = VALID_COMPETITIONS.includes(req.query.competition) ? req.query.competition : 'UCL';
+  const stageCondition = competition === 'UCL' ? `AND stage = 'LEAGUE_PHASE'` : '';
+
+  try {
+    const query = `
+      WITH comp_teams AS (
+        SELECT DISTINCT team_id FROM (
+          SELECT home_team_id AS team_id FROM matches WHERE competition = $1
+          UNION
+          SELECT away_team_id AS team_id FROM matches WHERE competition = $1
+        ) x
+      ),
+      team_matches AS (
+        SELECT home_team_id AS team_id, home_score AS goals_for, away_score AS goals_against
+        FROM matches
+        WHERE competition = $1 AND status = 'FINISHED' ${stageCondition}
+        UNION ALL
+        SELECT away_team_id AS team_id, away_score AS goals_for, home_score AS goals_against
+        FROM matches
+        WHERE competition = $1 AND status = 'FINISHED' ${stageCondition}
+      )
+      SELECT
+        t.id, t.name, t.logo_url,
+        COUNT(tm.team_id) AS played,
+        SUM(CASE WHEN tm.goals_for > tm.goals_against THEN 1 ELSE 0 END) AS won,
+        SUM(CASE WHEN tm.goals_for = tm.goals_against THEN 1 ELSE 0 END) AS drawn,
+        SUM(CASE WHEN tm.goals_for < tm.goals_against THEN 1 ELSE 0 END) AS lost,
+        COALESCE(SUM(tm.goals_for), 0) AS goals_for,
+        COALESCE(SUM(tm.goals_against), 0) AS goals_against,
+        COALESCE(SUM(tm.goals_for) - SUM(tm.goals_against), 0) AS goal_difference,
+        COALESCE(SUM(
+          CASE
+            WHEN tm.goals_for > tm.goals_against THEN 3
+            WHEN tm.goals_for = tm.goals_against THEN 1
+            ELSE 0
+          END
+        ), 0) AS points
+      FROM teams t
+      JOIN comp_teams ct ON ct.team_id = t.id
+      LEFT JOIN team_matches tm ON tm.team_id = t.id
+      GROUP BY t.id, t.name, t.logo_url
+      ORDER BY points DESC, goal_difference DESC, goals_for DESC;
+    `;
+    const result = await pool.query(query, [competition]);
+    res.json({ standings: result.rows });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load standings' });
+  }
+});
+
+module.exports = router;
