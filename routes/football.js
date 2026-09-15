@@ -136,4 +136,31 @@ router.get('/stats', async (req, res) => {
     res.status(500).json({ error: 'Failed to load stats' });
   }
 });
+
+router.get('/players', async (req, res) => {
+  const competition = VALID_COMPETITIONS.includes(req.query.competition) ? req.query.competition : 'UCL';
+
+  try {
+    const query = `
+      WITH comp_teams AS (
+        SELECT DISTINCT team_id FROM (
+          SELECT home_team_id AS team_id FROM matches WHERE competition = $1
+          UNION
+          SELECT away_team_id AS team_id FROM matches WHERE competition = $1
+        ) x
+      )
+      SELECT p.name, p.position, p.jersey_number, t.name AS team_name
+      FROM players p
+      JOIN teams t ON t.id = p.team_id
+      JOIN comp_teams ct ON ct.team_id = t.id
+      ORDER BY t.name ASC, p.jersey_number ASC NULLS LAST;
+    `;
+    const result = await pool.query(query, [competition]);
+    res.json({ players: result.rows });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to load players' });
+  }
+});
+
 module.exports = router;
