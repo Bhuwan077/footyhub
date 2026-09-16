@@ -9,6 +9,7 @@ const API_BASE = 'https://soccer.highlightly.net';
 const HEADERS = { 'x-rapidapi-key': process.env.HIGHLIGHTLY_API_KEY };
 const EPL_LEAGUE_ID = 33973;
 const SEASON = 2026;
+const COMPETITION = 'EPL';
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -39,6 +40,38 @@ async function getFinishedMatches() {
   }
 
   return all.filter(m => m.state?.description?.toLowerCase().includes('finish'));
+}
+
+// Tracks which matches have already had their lineup fetched for squad population,
+// so re-runs don't burn Highlightly quota re-fetching lineups we already processed.
+// Shared table with populatePlayers.js (UCL), distinguished by the competition column.
+// Created automatically if it doesn't exist yet — safe to run on every invocation.
+async function ensureTrackingTable() {
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS processed_squad_matches (
+      highlightly_match_id BIGINT NOT NULL,
+      competition VARCHAR(10) NOT NULL,
+      processed_at TIMESTAMP DEFAULT NOW(),
+      PRIMARY KEY (highlightly_match_id, competition)
+    );
+  `);
+}
+
+async function getAlreadyProcessedMatchIds() {
+  const result = await pool.query(
+    `SELECT highlightly_match_id FROM processed_squad_matches WHERE competition = $1`,
+    [COMPETITION]
+  );
+  return new Set(result.rows.map(r => String(r.highlightly_match_id)));
+}
+
+async function markProcessed(matchId) {
+  await pool.query(
+    `INSERT INTO processed_squad_matches (highlightly_match_id, competition)
+     VALUES ($1, $2)
+     ON CONFLICT (highlightly_match_id, competition) DO NOTHING`,
+    [matchId, COMPETITION]
+  );
 }
 
 const TEAM_ALIASES = {
@@ -91,9 +124,12 @@ function extractPlayers(teamData) {
   return players;
 }
 
+// Returns { stored, published }. published=false means Highlightly hasn't posted the
+// lineup for this match yet — in that case the caller should NOT mark it processed,
+// so it gets retried on a later run instead of being skipped forever.
 async function storePlayersForMatch(matchId) {
   const lineup = await fetchJSON(`${API_BASE}/lineups/${matchId}`);
-  if (!lineup.homeTeam || !lineup.awayTeam) return 0;
+  if (!lineup.homeTeam || !lineup.awayTeam) return { stored: 0, published: false };
 
   let stored = 0;
   for (const teamData of [lineup.homeTeam, lineup.awayTeam]) {
@@ -117,20 +153,36 @@ async function storePlayersForMatch(matchId) {
       stored++;
     }
   }
-  return stored;
+  return { stored, published: true };
 }
 
 async function main() {
   try {
-    const matches = await getFinishedMatches();
-    console.log(`Found ${matches.length} finished EPL matches.`);
+    await ensureTrackingTable();
+
+    const finishedMatches = await getFinishedMatches();
+    const alreadyProcessed = await getAlreadyProcessedMatchIds();
+
+    const matches = finishedMatches.filter(m => !alreadyProcessed.has(String(m.id)));
+    const skipped = finishedMatches.length - matches.length;
+
+    console.log(`Found ${finishedMatches.length} finished EPL matches.`);
+    console.log(`Skipping ${skipped} already-processed matches. ${matches.length} to fetch.`);
+
     let total = 0;
 
     for (const match of matches) {
       console.log(`Fetching lineup for match ${match.id} (${match.homeTeam?.name} vs ${match.awayTeam?.name})...`);
-      const count = await storePlayersForMatch(match.id);
-      total += count;
-      console.log(`  -> ${count} players stored.`);
+      const { stored, published } = await storePlayersForMatch(match.id);
+      total += stored;
+
+      if (published) {
+        await markProcessed(match.id);
+        console.log(`  -> ${stored} players stored.`);
+      } else {
+        console.log(`  -> lineup not yet published, will retry next run.`);
+      }
+
       await sleep(1500);
     }
 
