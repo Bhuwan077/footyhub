@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db/db');
 
-const VALID_COMPETITIONS = ['UCL', 'EPL'];
+const VALID_COMPETITIONS = ['UCL', 'EPL', 'LALIGA'];
 
 router.get('/matches', async (req, res) => {
   const competition = VALID_COMPETITIONS.includes(req.query.competition) ? req.query.competition : 'UCL';
