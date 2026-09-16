@@ -81,9 +81,12 @@ async function storeEventsForDate(dateStr) {
   const events = data.events || [];
 
   let inserted = 0;
+  let hadCompletedMatch = false;
+
   for (const event of events) {
     const competition = event.competitions?.[0];
     if (!competition?.status?.type?.completed) continue; // only finished matches
+    hadCompletedMatch = true;
 
     // Build a quick team-id -> name lookup from this event's own competitors list,
     // since the "details" entries only carry a team id, not a name.
@@ -118,7 +121,7 @@ async function storeEventsForDate(dateStr) {
       inserted++;
     }
   }
-  return inserted;
+  return { inserted, hadCompletedMatch };
 }
 
 async function main() {
@@ -132,15 +135,22 @@ async function main() {
     console.log(`Skipping ${allDates.length - datesToFetch.length} already-processed date(s). ${datesToFetch.length} to fetch.`);
 
     let totalEvents = 0;
+    let skippedFuture = 0;
     for (const dateStr of datesToFetch) {
-      const count = await storeEventsForDate(dateStr);
-      totalEvents += count;
-      console.log(`  ${dateStr}: ${count} events stored.`);
-      await markDateProcessed(dateStr);
+      const { inserted, hadCompletedMatch } = await storeEventsForDate(dateStr);
+      totalEvents += inserted;
+
+      if (hadCompletedMatch) {
+        console.log(`  ${dateStr}: ${inserted} events stored.`);
+        await markDateProcessed(dateStr);
+      } else {
+        console.log(`  ${dateStr}: no finished matches yet, will recheck next run.`);
+        skippedFuture++;
+      }
       await sleep(500);
     }
 
-    console.log(`Done. ${totalEvents} total events stored across ${datesToFetch.length} date(s).`);
+    console.log(`Done. ${totalEvents} total events stored. ${skippedFuture} date(s) not yet played, left unmarked for a future run.`);
   } catch (err) {
     console.error('Error populating La Liga events:', err.message);
   } finally {
