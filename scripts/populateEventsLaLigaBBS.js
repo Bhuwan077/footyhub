@@ -90,7 +90,7 @@ function formatMatchTime(elapsed, elapsedExtra) {
 
 async function storeEventsForMatch(matchId) {
   const data = await fetchJSON(`${BBS_BASE}/matches/${matchId}/events`);
-  const events = data.data || [];
+  const events = Array.isArray(data.data) ? data.data : [];
   if (events.length === 0) return 0;
 
   let inserted = 0;
@@ -135,9 +135,13 @@ async function main() {
     let totalEvents = 0;
     for (const match of matches) {
       console.log(`Fetching events for match ${match.id} (${match.home?.name} vs ${match.away?.name})...`);
-      const count = await storeEventsForMatch(match.id);
-      totalEvents += count;
-      console.log(`  -> ${count} events stored.`);
+      try {
+        const count = await storeEventsForMatch(match.id);
+        totalEvents += count;
+        console.log(`  -> ${count} events stored.`);
+      } catch (err) {
+        console.log(`  -> skipped due to error: ${err.message}`);
+      }
       await sleep(300);
     }
 
