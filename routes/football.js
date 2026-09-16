@@ -118,11 +118,18 @@ router.get('/stats', async (req, res) => {
     `, [competition]);
 
     const assists = await pool.query(`
-      SELECT assisting_player_name AS player_name, team_name, COUNT(*) AS count
-      FROM match_events
-      WHERE competition = $1 AND event_type = 'Goal' AND assisting_player_name IS NOT NULL
-      GROUP BY assisting_player_name, team_name
-      ORDER BY count DESC, player_name ASC
+      SELECT display_name AS player_name, team_name, cnt AS count
+      FROM (
+        SELECT
+          COALESCE(assisting_player_id::text, TRIM(assisting_player_name)) AS group_key,
+          team_name,
+          COUNT(*) AS cnt,
+          (ARRAY_AGG(TRIM(assisting_player_name) ORDER BY LENGTH(TRIM(assisting_player_name)) DESC))[1] AS display_name
+        FROM match_events
+        WHERE competition = $1 AND event_type = 'Goal' AND assisting_player_name IS NOT NULL
+        GROUP BY group_key, team_name
+      ) s
+      ORDER BY cnt DESC, display_name ASC
       LIMIT 20;
     `, [competition]);
 
