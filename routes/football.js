@@ -89,12 +89,31 @@ router.get('/stats', async (req, res) => {
   const competition = VALID_COMPETITIONS.includes(req.query.competition) ? req.query.competition : 'UCL';
 
   try {
+    // Goals, yellow cards, and red cards are grouped by player_id (falling back to
+    // trimmed player_name when player_id is null) so that name-format inconsistencies
+    // from Highlightly (e.g. "E. Haaland" vs "Erling Haaland" for the same player)
+    // don't split one player's tally across multiple leaderboard rows. The longest
+    // name variant seen for that player_id is used as the display name, since the
+    // fuller form is generally the more readable one.
+    //
+    // NOTE: assists can't use the same fix yet — match_events only stores
+    // assisting_player_name, with no assisting_player_id column, so assist name
+    // variants (e.g. "C. Gakpo" vs "Cody Gakpo") will still appear as separate rows
+    // until that column is added and backfilled.
+
     const goals = await pool.query(`
-      SELECT player_name, team_name, COUNT(*) AS count
-      FROM match_events
-      WHERE competition = $1 AND event_type IN ('Goal', 'Penalty')
-      GROUP BY player_name, team_name
-      ORDER BY count DESC, player_name ASC
+      SELECT display_name AS player_name, team_name, cnt AS count
+      FROM (
+        SELECT
+          COALESCE(player_id::text, TRIM(player_name)) AS group_key,
+          team_name,
+          COUNT(*) AS cnt,
+          (ARRAY_AGG(TRIM(player_name) ORDER BY LENGTH(TRIM(player_name)) DESC))[1] AS display_name
+        FROM match_events
+        WHERE competition = $1 AND event_type IN ('Goal', 'Penalty')
+        GROUP BY group_key, team_name
+      ) s
+      ORDER BY cnt DESC, display_name ASC
       LIMIT 20;
     `, [competition]);
 
@@ -108,20 +127,34 @@ router.get('/stats', async (req, res) => {
     `, [competition]);
 
     const yellowCards = await pool.query(`
-      SELECT player_name, team_name, COUNT(*) AS count
-      FROM match_events
-      WHERE competition = $1 AND event_type = 'Yellow Card'
-      GROUP BY player_name, team_name
-      ORDER BY count DESC, player_name ASC
+      SELECT display_name AS player_name, team_name, cnt AS count
+      FROM (
+        SELECT
+          COALESCE(player_id::text, TRIM(player_name)) AS group_key,
+          team_name,
+          COUNT(*) AS cnt,
+          (ARRAY_AGG(TRIM(player_name) ORDER BY LENGTH(TRIM(player_name)) DESC))[1] AS display_name
+        FROM match_events
+        WHERE competition = $1 AND event_type = 'Yellow Card'
+        GROUP BY group_key, team_name
+      ) s
+      ORDER BY cnt DESC, display_name ASC
       LIMIT 20;
     `, [competition]);
 
     const redCards = await pool.query(`
-      SELECT player_name, team_name, COUNT(*) AS count
-      FROM match_events
-      WHERE competition = $1 AND event_type = 'Red Card'
-      GROUP BY player_name, team_name
-      ORDER BY count DESC, player_name ASC
+      SELECT display_name AS player_name, team_name, cnt AS count
+      FROM (
+        SELECT
+          COALESCE(player_id::text, TRIM(player_name)) AS group_key,
+          team_name,
+          COUNT(*) AS cnt,
+          (ARRAY_AGG(TRIM(player_name) ORDER BY LENGTH(TRIM(player_name)) DESC))[1] AS display_name
+        FROM match_events
+        WHERE competition = $1 AND event_type = 'Red Card'
+        GROUP BY group_key, team_name
+      ) s
+      ORDER BY cnt DESC, display_name ASC
       LIMIT 20;
     `, [competition]);
 
