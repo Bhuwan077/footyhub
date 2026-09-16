@@ -43,6 +43,18 @@ async function getFinishedMatches() {
   return finished;
 }
 
+// Returns the set of highlightly_match_id values that already have at least one
+// event row stored for UCL. A match's events are fetched in a single API call
+// (storeEventsForMatch), so "has any row" reliably means "already fully processed" —
+// safe to skip re-fetching it from Highlightly.
+async function getAlreadyStoredMatchIds() {
+  const result = await pool.query(
+    `SELECT DISTINCT highlightly_match_id FROM match_events WHERE competition = $1`,
+    ['UCL']
+  );
+  return new Set(result.rows.map(r => String(r.highlightly_match_id)));
+}
+
 async function storeEventsForMatch(matchId) {
   const events = await fetchJSON(`${API_BASE}/events/${matchId}`);
   if (!Array.isArray(events) || events.length === 0) return 0;
@@ -71,7 +83,13 @@ async function storeEventsForMatch(matchId) {
 
 async function main() {
   try {
-    const matches = await getFinishedMatches();
+    const finishedMatches = await getFinishedMatches();
+    const alreadyStored = await getAlreadyStoredMatchIds();
+
+    const matches = finishedMatches.filter(m => !alreadyStored.has(String(m.id)));
+    const skipped = finishedMatches.length - matches.length;
+    console.log(`Skipping ${skipped} already-stored matches. ${matches.length} new match(es) to fetch.`);
+
     let totalEvents = 0;
 
     for (const match of matches) {
@@ -82,7 +100,7 @@ async function main() {
       await sleep(1500);
     }
 
-    console.log(`Done. ${totalEvents} total events stored across ${matches.length} matches.`);
+    console.log(`Done. ${totalEvents} total events stored across ${matches.length} new match(es).`);
   } catch (err) {
     console.error('Error populating events:', err.message);
   } finally {
