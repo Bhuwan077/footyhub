@@ -73,13 +73,12 @@ async function markProcessed(matchId) {
 }
 
 // Keyed by the name HIGHLIGHTLY returns -> the name stored in our teams table.
-// (Previously this was backwards, keyed by our DB name, so the lookup never matched.)
 const TEAM_ALIASES = {
   'PAE AEK': 'AEK Athens FC',
   'Bayern Munich': 'FC Bayern München'
 };
 
-const SUFFIX_WORDS = /\b(fc|cf|sk|kv|ac|afc|ssc|as|sc|osc|1907|balompié|balompie|rotterdam|clube|club|de|portugal)\b/g;
+const SUFFIX_WORDS = /\b(fc|cf|sk|kv|ac|afc|ssc|as|sc|osc|fk|fa|1907|balompié|balompie|rotterdam|clube|club|de|portugal)\b/g;
 
 function normalizeTeamName(name) {
   return name
