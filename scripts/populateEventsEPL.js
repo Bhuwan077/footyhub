@@ -58,11 +58,16 @@ async function storeEventsForMatch(matchId) {
 
   let inserted = 0;
   for (const ev of events) {
+    // ON CONFLICT targets the same COALESCE(player_id, name) expression as the
+    // match_events_dedup_idx unique index — this treats "F. Torres" and
+    // "Ferrán Torres" as the same event when they share a player_id, so a
+    // re-run that gets a different name format from Highlightly can't insert
+    // a duplicate goal/card/substitution row for the same match_time.
     await pool.query(
       `INSERT INTO match_events
         (highlightly_match_id, event_type, player_name, player_id, team_name, assisting_player_name, assisting_player_id, match_time, competition)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
-       ON CONFLICT (highlightly_match_id, player_name, event_type, match_time) DO NOTHING`,
+       ON CONFLICT (highlightly_match_id, (COALESCE(player_id::text, TRIM(player_name))), event_type, match_time) DO NOTHING`,
       [
         matchId,
         ev.type || null,
