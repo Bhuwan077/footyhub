@@ -60,8 +60,8 @@ async function storeEventsForMatch(matchId) {
   for (const ev of events) {
     await pool.query(
       `INSERT INTO match_events
-        (highlightly_match_id, event_type, player_name, player_id, team_name, assisting_player_name, match_time, competition)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+        (highlightly_match_id, event_type, player_name, player_id, team_name, assisting_player_name, assisting_player_id, match_time, competition)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
        ON CONFLICT (highlightly_match_id, player_name, event_type, match_time) DO NOTHING`,
       [
         matchId,
@@ -70,6 +70,7 @@ async function storeEventsForMatch(matchId) {
         ev.playerId || null,
         ev.team?.name || null,
         ev.assist || null,
+        ev.assistingPlayerId || null,
         ev.time || null,
         'EPL'
       ]
