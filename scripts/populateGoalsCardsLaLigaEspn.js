@@ -1,12 +1,10 @@
 require('dotenv').config();
 const pool = require('../db/db');
 
-// ESPN's undocumented public site API — no API key needed. This script is intentionally
-// scoped to CARDS ONLY. Goals and assists for La Liga come from Big Balls Sports Data
-// (populateEventsLaLigaBBS.js) instead — keeping one source per event type means the two
-// providers' different match-id systems (BBS: UUIDs, ESPN: numeric) never need to be
-// cross-referenced against each other. Stats are aggregated by event_type independently,
-// so rows from both sources can coexist in match_events without any conflict.
+// ESPN's undocumented public site API — no API key needed. This script handles GOALS
+// and CARDS for La Liga. Assists come from Big Balls Sports Data instead
+// (populateAssistsLaLigaBBS.js), stored as their own 'Assist' event type — so goals/cards
+// and assists never need to be cross-referenced against each other's match-id systems.
 const ESPN_BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1';
 const COMPETITION = 'LALIGA';
 
@@ -34,11 +32,11 @@ async function getSeasonDates() {
   return dates;
 }
 
-// Separate tracking table from the old populateEventsLaLigaEspn.js's processed_event_dates,
-// so this cards-only script has its own independent "already done" state.
+// Own tracking table, independent of the old (now retired) processed_event_dates and
+// processed_card_dates tables from earlier iterations.
 async function ensureTrackingTable() {
   await pool.query(`
-    CREATE TABLE IF NOT EXISTS processed_card_dates (
+    CREATE TABLE IF NOT EXISTS processed_goals_cards_dates (
       date_str VARCHAR(8) NOT NULL,
       competition VARCHAR(10) NOT NULL,
       processed_at TIMESTAMP DEFAULT NOW(),
@@ -49,7 +47,7 @@ async function ensureTrackingTable() {
 
 async function getAlreadyProcessedDates() {
   const result = await pool.query(
-    `SELECT date_str FROM processed_card_dates WHERE competition = $1`,
+    `SELECT date_str FROM processed_goals_cards_dates WHERE competition = $1`,
     [COMPETITION]
   );
   return new Set(result.rows.map(r => r.date_str));
@@ -57,21 +55,24 @@ async function getAlreadyProcessedDates() {
 
 async function markDateProcessed(dateStr) {
   await pool.query(
-    `INSERT INTO processed_card_dates (date_str, competition) VALUES ($1, $2)
+    `INSERT INTO processed_goals_cards_dates (date_str, competition) VALUES ($1, $2)
      ON CONFLICT (date_str, competition) DO NOTHING`,
     [dateStr, COMPETITION]
   );
 }
 
-// Only returns 'Yellow Card' or 'Red Card' — goals are deliberately ignored here since
-// BBS already provides them. Confirmed live in an earlier test against this same API.
-function normalizeCardType(detail) {
+// Goals AND cards, both handled here — confirmed live against this API back when we first
+// tested ESPN (redCard/yellowCard/ownGoal/penaltyKick/scoringPlay flags).
+function normalizeEventType(detail) {
+  if (detail.ownGoal) return 'Own Goal';
+  if (detail.penaltyKick) return 'Penalty';
+  if (detail.scoringPlay) return 'Goal';
   if (detail.redCard) return 'Red Card';
   if (detail.yellowCard) return 'Yellow Card';
   return null;
 }
 
-async function storeCardsForDate(dateStr) {
+async function storeEventsForDate(dateStr) {
   const data = await fetchJSON(`${ESPN_BASE}/scoreboard?dates=${dateStr}`);
   const events = data.events || [];
 
@@ -89,7 +90,7 @@ async function storeCardsForDate(dateStr) {
     }
 
     for (const detail of competition.details || []) {
-      const eventType = normalizeCardType(detail);
+      const eventType = normalizeEventType(detail);
       if (!eventType) continue;
 
       const player = detail.athletesInvolved?.[0];
@@ -102,7 +103,7 @@ async function storeCardsForDate(dateStr) {
          VALUES ($1, $2, $3, $4, $5, NULL, NULL, $6, $7)
          ON CONFLICT (highlightly_match_id, player_name, event_type, match_time) DO NOTHING`,
         [
-          `espn-${event.id}`, // prefixed so it can never collide with a BBS UUID or numeric id
+          `espn-${event.id}`,
           eventType,
           player.displayName || 'Unknown',
           player.id || null,
@@ -127,14 +128,14 @@ async function main() {
 
     console.log(`Skipping ${allDates.length - datesToFetch.length} already-processed date(s). ${datesToFetch.length} to fetch.`);
 
-    let totalCards = 0;
+    let totalEvents = 0;
     let skippedFuture = 0;
     for (const dateStr of datesToFetch) {
-      const { inserted, hadCompletedMatch } = await storeCardsForDate(dateStr);
-      totalCards += inserted;
+      const { inserted, hadCompletedMatch } = await storeEventsForDate(dateStr);
+      totalEvents += inserted;
 
       if (hadCompletedMatch) {
-        console.log(`  ${dateStr}: ${inserted} card(s) stored.`);
+        console.log(`  ${dateStr}: ${inserted} event(s) stored.`);
         await markDateProcessed(dateStr);
       } else {
         console.log(`  ${dateStr}: no finished matches yet, will recheck next run.`);
@@ -143,9 +144,9 @@ async function main() {
       await sleep(500);
     }
 
-    console.log(`Done. ${totalCards} total card(s) stored. ${skippedFuture} date(s) not yet played, left unmarked for a future run.`);
+    console.log(`Done. ${totalEvents} total event(s) stored. ${skippedFuture} date(s) not yet played, left unmarked for a future run.`);
   } catch (err) {
-    console.error('Error populating La Liga cards:', err.message);
+    console.error('Error populating La Liga goals/cards:', err.message);
   } finally {
     await pool.end();
   }

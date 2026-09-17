@@ -117,9 +117,24 @@ router.get('/stats', async (req, res) => {
       LIMIT 20;
     `, [competition]);
 
+    // Two different assist patterns coexist: La Liga stores each assist as its own
+    // dedicated 'Assist' row (from Big Balls Sports Data, with a real assist player id).
+    // UCL/EPL still attach the assist name to the scorer's 'Goal' row (from Highlightly,
+    // no id available). This UNIONs both so every competition's assists keep working.
     const assists = await pool.query(`
       SELECT display_name AS player_name, team_name, cnt AS count
       FROM (
+        SELECT
+          COALESCE(player_id::text, TRIM(player_name)) AS group_key,
+          team_name,
+          COUNT(*) AS cnt,
+          (ARRAY_AGG(TRIM(player_name) ORDER BY LENGTH(TRIM(player_name)) DESC))[1] AS display_name
+        FROM match_events
+        WHERE competition = $1 AND event_type = 'Assist'
+        GROUP BY group_key, team_name
+
+        UNION ALL
+
         SELECT
           COALESCE(assisting_player_id::text, TRIM(assisting_player_name)) AS group_key,
           team_name,
