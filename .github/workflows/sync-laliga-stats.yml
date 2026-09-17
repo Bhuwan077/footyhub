@@ -17,8 +17,13 @@ jobs:
 
       - run: npm ci
 
-      - name: Sync La Liga events (goals/cards/assists)
+      - name: Sync La Liga goals/assists
         run: node scripts/populateEventsLaLigaBBS.js
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           BIGBALLS_API_KEY: ${{ secrets.BIGBALLS_API_KEY }}
+
+      - name: Sync La Liga cards
+        run: node scripts/populateCardsLaLigaEspn.js
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
