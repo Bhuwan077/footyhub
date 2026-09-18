@@ -11,6 +11,15 @@ const pool = require('../db/db');
 // date, same pattern as populatePlayers.js's processed_squad_matches table —
 // fetch the league's full finished-match list once, only process match IDs
 // not already in the tracking table.
+//
+// IMPORTANT #2: /v1/results?leagueId=Y also does NOT filter by season — it
+// returns finished matches spanning multiple leagueYear values (confirmed via
+// testing: a single request mixed "2025/2026" and "2026/2027" fixtures for
+// Bundesliga, 23 stale-season matches out of 50 total). This caused inflated
+// goal/assist counts (e.g. Matanović showing 6 instead of 3) because last
+// season's matches were being tagged onto the current season's stats. So
+// finished matches are additionally filtered to the current season's
+// leagueYear string before anything gets processed or stored.
 const GOAL_API_BASE = 'https://api.goal-api.com/v1';
 const API_KEY = process.env.GOAL_API_KEY;
 
@@ -18,6 +27,18 @@ const LEAGUES = {
   SERIEA: { goalApiLeagueId: 'cmr77dvpd006yrx06zig7907g' },
   BUNDESLIGA: { goalApiLeagueId: 'cmr77dvgm0002rx06rt2uqxii' }
 };
+
+// European domestic league seasons run roughly Aug–May, straddling the
+// calendar year. Compute the current one as "YYYY/YYYY+1" so this never
+// needs a manual bump each summer. Treat July as the season rollover month
+// (pre-season friendlies/early fixtures typically start being listed by
+// then, and the previous season is long finished).
+function getCurrentSeasonString(date = new Date()) {
+  const year = date.getUTCFullYear();
+  const month = date.getUTCMonth() + 1; // 1-12
+  const startYear = month >= 7 ? year : year - 1;
+  return `${startYear}/${startYear + 1}`;
+}
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -62,11 +83,14 @@ async function markMatchProcessed(matchId, competition) {
 
 // Fetch ALL finished matches for a league in one go, rather than looping
 // dates — since date filtering isn't reliable, requesting once and filtering
-// client-side by matchStatus is both correct and far cheaper on quota.
-async function getFinishedMatches(leagueId) {
+// client-side by matchStatus AND current season is both correct and far
+// cheaper on quota.
+async function getFinishedMatches(leagueId, currentSeason) {
   const data = await fetchJSON(`/results?leagueId=${leagueId}`);
   const matches = data?.data || [];
-  return matches.filter(m => m.matchStatus === 'FINISHED');
+  return matches.filter(
+    m => m.matchStatus === 'FINISHED' && m.leagueYear === currentSeason
+  );
 }
 
 function normalizeEventType(rawType) {
@@ -124,15 +148,17 @@ async function storeEventsForFixture(fixtureId, competition, homeTeamName, awayT
 async function main() {
   try {
     await ensureTrackingTable();
+    const currentSeason = getCurrentSeasonString();
+    console.log(`Filtering to current season: ${currentSeason}`);
 
     for (const [competition, cfg] of Object.entries(LEAGUES)) {
       console.log(`\n=== ${competition} ===`);
 
-      const finishedMatches = await getFinishedMatches(cfg.goalApiLeagueId);
+      const finishedMatches = await getFinishedMatches(cfg.goalApiLeagueId, currentSeason);
       const processedIds = await getAlreadyProcessedMatchIds(competition);
       const newMatches = finishedMatches.filter(m => !processedIds.has(m.id));
 
-      console.log(`Found ${finishedMatches.length} finished match(es) total. ${newMatches.length} new (not yet processed).`);
+      console.log(`Found ${finishedMatches.length} finished match(es) in ${currentSeason}. ${newMatches.length} new (not yet processed).`);
 
       let totalNewEvents = 0;
       for (const match of newMatches) {
