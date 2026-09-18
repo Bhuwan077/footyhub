@@ -1,0 +1,23 @@
+name: Sync Serie A & Bundesliga Cards
+
+on:
+  schedule:
+    - cron: '0 7,19 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Sync Serie A/Bundesliga cards
+        run: node scripts/populateCardsSerieABundesligaEspn.js
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}

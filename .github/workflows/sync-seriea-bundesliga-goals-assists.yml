@@ -1,0 +1,24 @@
+name: Sync Serie A & Bundesliga Goals/Assists
+
+on:
+  schedule:
+    - cron: '0 6,18 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Sync Serie A/Bundesliga goals & assists
+        run: node scripts/populateGoalsAssistsSerieABundesligaGoalApi.js
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GOAL_API_KEY: ${{ secrets.GOAL_API_KEY }}
