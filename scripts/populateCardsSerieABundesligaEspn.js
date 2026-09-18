@@ -1,5 +1,6 @@
 require('dotenv').config({ quiet: true });
 const pool = require('../db/db');
+const { normalizeTeamName } = require('./espnTeamAliases');
 
 // ESPN's undocumented public site API — cards ONLY for Serie A and Bundesliga.
 // Goals+assists come from GOAL API instead (populateGoalsAssistsSerieABundesligaGoalApi.js),
@@ -13,28 +14,6 @@ const LEAGUES = {
   SERIEA: { slug: 'ita.1' },
   BUNDESLIGA: { slug: 'ger.1' }
 };
-
-// ESPN's team.displayName sometimes differs from the name used elsewhere
-// (football-data.org / GOAL API) for the same club — ESPN tends to use
-// fuller official names, German clubs especially (e.g. "Borussia Dortmund"
-// vs "Dortmund", "1. FC Union Berlin" vs "Union Berlin"). Normalized here so
-// team_name is consistent across goals/assists/cards on the stats page.
-// Extend this as more mismatches surface.
-const ESPN_TEAM_NAME_ALIASES = {
-  'Internazionale': 'Inter',
-  '1. FC Union Berlin': 'Union Berlin',
-  'Borussia Mönchengladbach': 'B. Monchengladbach',
-  'FC Augsburg': 'Augsburg',
-  'TSG Hoffenheim': 'Hoffenheim',
-  'Borussia Dortmund': 'Dortmund',
-  'Hamburg SV': 'Hamburger SV',
-  'SV Elversberg': 'Elversberg',
-  'Schalke 04': 'Schalke'
-};
-
-function normalizeTeamName(name) {
-  return ESPN_TEAM_NAME_ALIASES[name] || name;
-}
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -85,8 +64,6 @@ async function markDateProcessed(dateStr, competition) {
   );
 }
 
-// Cards only — goal-related flags (scoringPlay/ownGoal/penaltyKick) are
-// intentionally ignored here since GOAL API already covers those.
 function normalizeCardType(detail) {
   if (detail.redCard) return 'Red Card';
   if (detail.yellowCard) return 'Yellow Card';

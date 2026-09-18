@@ -4,6 +4,12 @@ const pool = require('../db/db');
 
 const VALID_COMPETITIONS = ['UCL', 'EPL', 'LALIGA', 'SERIEA', 'BUNDESLIGA'];
 
+// Leagues whose player squads come from ESPN (players.espn_player_id set).
+// UCL and EPL squads come from Highlightly. Clubs that play in both UCL and a
+// domestic league have rows from both sources on the same team_id, so /players
+// picks the source per competition to avoid showing duplicates.
+const ESPN_SQUAD_COMPETITIONS = ['LALIGA', 'SERIEA', 'BUNDESLIGA'];
+
 router.get('/matches', async (req, res) => {
   const competition = VALID_COMPETITIONS.includes(req.query.competition) ? req.query.competition : 'UCL';
 
@@ -195,6 +201,12 @@ router.get('/stats', async (req, res) => {
 router.get('/players', async (req, res) => {
   const competition = VALID_COMPETITIONS.includes(req.query.competition) ? req.query.competition : 'UCL';
 
+  // ESPN-sourced leagues show only ESPN squad rows; UCL/EPL show every row that
+  // did not come from ESPN (Highlightly rows, including any with a null id).
+  const sourceCondition = ESPN_SQUAD_COMPETITIONS.includes(competition)
+    ? 'p.espn_player_id IS NOT NULL'
+    : 'p.espn_player_id IS NULL';
+
   try {
     const query = `
       WITH comp_teams AS (
@@ -208,6 +220,7 @@ router.get('/players', async (req, res) => {
       FROM players p
       JOIN teams t ON t.id = p.team_id
       JOIN comp_teams ct ON ct.team_id = t.id
+      WHERE ${sourceCondition}
       ORDER BY t.name ASC, p.jersey_number ASC NULLS LAST;
     `;
     const result = await pool.query(query, [competition]);

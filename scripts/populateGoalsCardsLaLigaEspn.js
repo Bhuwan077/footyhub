@@ -1,5 +1,6 @@
 require('dotenv').config();
 const pool = require('../db/db');
+const { normalizeTeamName } = require('./espnTeamAliases');
 
 // ESPN's undocumented public site API — no API key needed. This script handles GOALS
 // and CARDS for La Liga. Assists come from Big Balls Sports Data instead
@@ -32,8 +33,6 @@ async function getSeasonDates() {
   return dates;
 }
 
-// Own tracking table, independent of the old (now retired) processed_event_dates and
-// processed_card_dates tables from earlier iterations.
 async function ensureTrackingTable() {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS processed_goals_cards_dates (
@@ -61,8 +60,6 @@ async function markDateProcessed(dateStr) {
   );
 }
 
-// Goals AND cards, both handled here — confirmed live against this API back when we first
-// tested ESPN (redCard/yellowCard/ownGoal/penaltyKick/scoringPlay flags).
 function normalizeEventType(detail) {
   if (detail.ownGoal) return 'Own Goal';
   if (detail.penaltyKick) return 'Penalty';
@@ -86,7 +83,7 @@ async function storeEventsForDate(dateStr) {
 
     const teamNames = {};
     for (const c of competition.competitors || []) {
-      teamNames[c.team.id] = c.team.displayName;
+      teamNames[c.team.id] = normalizeTeamName(c.team.displayName);
     }
 
     for (const detail of competition.details || []) {
