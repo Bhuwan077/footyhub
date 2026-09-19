@@ -1,0 +1,4640 @@
+
+=== LALIGA (esp.1) ===
+Teams returned: 20
+
+  -- Roster for Alavés (id=96) --
+  Players returned: 27
+  Sample rows:
+[
+  {
+    "id": "150374",
+    "uid": "s:600~a:150374",
+    "guid": "a14344e0-8a20-44fb-1a83-8c14734e22c3",
+    "firstName": "Adrián",
+    "middleName": "",
+    "lastName": "Rodríguez",
+    "fullName": "Adrián Rodríguez",
+    "displayName": "Adrián Rodríguez",
+    "shortName": "A. Rodríguez",
+    "weight": 181,
+    "displayWeight": "181 lbs",
+    "height": 77,
+    "displayHeight": "6' 5\"",
+    "age": 25,
+    "dateOfBirth": "2000-12-12T08:00Z",
+    "pronunciation": "Ad-ree-AN Rod-REE-gez",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/150374/adrian-rodriguez",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/150374/adrian-rodriguez",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:150374&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/150374/adrian-rodriguez",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/150374/adrian-rodriguez",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:150374&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/150374/adrian-rodriguez",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:150374&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/150374/adrian-rodriguez",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:150374&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/150374/adrian-rodriguez",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:150374",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/150374/adrian-rodriguez",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/150374/adrian-rodriguez",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Argentina",
+    "citizenshipCountry": {
+      "alternateId": "1",
+      "abbreviation": "ARG"
+    },
+    "slug": "adrian-rodriguez",
+    "jersey": "13",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+      "alt": "Argentina",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.1/athletes/150374/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/150374/leagues?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/150374/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/96?lang=en&region=us"
+    }
+  },
+  {
+    "id": "200910",
+    "uid": "s:600~a:200910",
+    "guid": "7a83cebc-5d5a-8fa7-61fb-aa52e3346513",
+    "firstName": "Antonio",
+    "middleName": "",
+    "lastName": "Sivera",
+    "fullName": "Antonio Sivera",
+    "displayName": "Antonio Sivera",
+    "shortName": "A. Sivera",
+    "weight": 163,
+    "displayWeight": "163 lbs",
+    "height": 72,
+    "displayHeight": "6' 0\"",
+    "age": 30,
+    "dateOfBirth": "1996-08-11T07:00Z",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/200910/antonio-sivera",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/200910/antonio-sivera",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:200910&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/200910/antonio-sivera",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/200910/antonio-sivera",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:200910&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/200910/antonio-sivera",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:200910&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/200910/antonio-sivera",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:200910&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/200910/antonio-sivera",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:200910",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/200910/antonio-sivera",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/200910/antonio-sivera",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Spain",
+    "citizenshipCountry": {
+      "alternateId": "13",
+      "abbreviation": "ESP"
+    },
+    "slug": "antonio-sivera",
+    "jersey": "1",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+      "alt": "Spain",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 1,
+                "displayValue": "1"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 6,
+                "displayValue": "6"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 1,
+                "displayValue": "1"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 17,
+                "displayValue": "17"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 6,
+                "displayValue": "6"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.1/athletes/200910/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/200910/leagues?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/200910/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/96?lang=en&region=us"
+    }
+  }
+]
+
+  -- Roster for Athletic Club (id=93) --
+  Players returned: 30
+  Sample rows:
+[
+  {
+    "id": "222375",
+    "uid": "s:600~a:222375",
+    "guid": "db877e27-6e30-6c82-5760-06f766ad33a3",
+    "firstName": "Unai",
+    "middleName": "",
+    "lastName": "Simón",
+    "fullName": "Unai Simón",
+    "displayName": "Unai Simón",
+    "shortName": "U. Simón",
+    "weight": 192,
+    "displayWeight": "192 lbs",
+    "height": 75,
+    "displayHeight": "6' 3\"",
+    "age": 29,
+    "dateOfBirth": "1997-06-11T07:00Z",
+    "pronunciation": "oo-NAH-ee see-MON",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/222375/unai-simon",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/222375/unai-simon",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:222375&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/222375/unai-simon",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/222375/unai-simon",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:222375&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/222375/unai-simon",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:222375&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/222375/unai-simon",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:222375&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/222375/unai-simon",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:222375",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/222375/unai-simon",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/222375/unai-simon",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Spain",
+    "citizenshipCountry": {
+      "alternateId": "13",
+      "abbreviation": "ESP"
+    },
+    "slug": "unai-simon",
+    "jersey": "1",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+      "alt": "Spain",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 6,
+                "displayValue": "6"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 17,
+                "displayValue": "17"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 6,
+                "displayValue": "6"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.1/athletes/222375/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/222375/leagues?lang=en&region=us"
+    },
+    "transactions": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/222375/transactions?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/222375/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/93?lang=en&region=us"
+    }
+  },
+  {
+    "id": "287410",
+    "uid": "s:600~a:287410",
+    "guid": "9deb6c97-7044-5209-0a3c-826e1630037f",
+    "firstName": "Mikel",
+    "lastName": "Santos",
+    "fullName": "Mikel Santos",
+    "displayName": "Mikel Santos",
+    "shortName": "M. Santos",
+    "weight": 159,
+    "displayWeight": "159 lbs",
+    "height": 72,
+    "displayHeight": "6' 0\"",
+    "age": 21,
+    "dateOfBirth": "2004-11-01T08:00Z",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/287410/mikel-santos",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/287410/mikel-santos",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:287410&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/287410/mikel-santos",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/287410/mikel-santos",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:287410&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/287410/mikel-santos",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:287410&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/287410/mikel-santos",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:287410&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/287410/mikel-santos",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:287410",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/287410/mikel-santos",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/287410/mikel-santos",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Spain",
+    "citizenshipCountry": {
+      "alternateId": "13",
+      "abbreviation": "ESP"
+    },
+    "slug": "mikel-santos",
+    "jersey": "26",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+      "alt": "Spain",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.1/athletes/287410/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/287410/leagues?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/287410/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/esp.2?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/5455?lang=en&region=us"
+    }
+  }
+]
+
+=== SERIEA (ita.1) ===
+Teams returned: 20
+
+  -- Roster for AC Milan (id=103) --
+  Players returned: 28
+  Sample rows:
+[
+  {
+    "id": "143100",
+    "uid": "s:600~a:143100",
+    "guid": "dd208ba1-aaba-c00f-a45d-f40d16019b4a",
+    "firstName": "Pietro",
+    "middleName": "",
+    "lastName": "Terracciano",
+    "fullName": "Pietro Terracciano",
+    "displayName": "Pietro Terracciano",
+    "shortName": "P. Terracciano",
+    "weight": 185,
+    "displayWeight": "185 lbs",
+    "height": 76,
+    "displayHeight": "6' 4\"",
+    "age": 36,
+    "dateOfBirth": "1990-03-08T08:00Z",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/143100/pietro-terracciano",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/143100/pietro-terracciano",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:143100&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/143100/pietro-terracciano",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/143100/pietro-terracciano",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:143100&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/143100/pietro-terracciano",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:143100&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/143100/pietro-terracciano",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:143100&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/143100/pietro-terracciano",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:143100",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/143100/pietro-terracciano",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/143100/pietro-terracciano",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Italy",
+    "citizenshipCountry": {
+      "alternateId": "10",
+      "abbreviation": "ITA"
+    },
+    "slug": "pietro-terracciano",
+    "jersey": "1",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "alt": "Italy",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ita.1/athletes/143100/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/143100/leagues?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/143100/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ita.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/103?lang=en&region=us"
+    }
+  },
+  {
+    "id": "189026",
+    "uid": "s:600~a:189026",
+    "guid": "3266a4c5-2370-d4a1-f0ef-bf1af7d14b29",
+    "firstName": "Mike",
+    "lastName": "Maignan",
+    "fullName": "Mike Maignan",
+    "displayName": "Mike Maignan",
+    "shortName": "M. Maignan",
+    "weight": 194,
+    "displayWeight": "194 lbs",
+    "height": 75,
+    "displayHeight": "6' 3\"",
+    "age": 31,
+    "dateOfBirth": "1995-07-03T07:00Z",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/189026/mike-maignan",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/189026/mike-maignan",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:189026&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/189026/mike-maignan",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/189026/mike-maignan",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:189026&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/189026/mike-maignan",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:189026&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/189026/mike-maignan",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:189026&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/189026/mike-maignan",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:189026",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/189026/mike-maignan",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/189026/mike-maignan",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "France",
+    "citizenshipCountry": {
+      "alternateId": "7",
+      "abbreviation": "FRA"
+    },
+    "slug": "mike-maignan",
+    "jersey": "16",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "alt": "France",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 2,
+                "displayValue": "2"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 4,
+                "displayValue": "4"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 10,
+                "displayValue": "10"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 4,
+                "displayValue": "4"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ita.1/athletes/189026/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/189026/leagues?lang=en&region=us"
+    },
+    "transactions": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/189026/transactions?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/189026/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ita.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/103?lang=en&region=us"
+    }
+  }
+]
+
+  -- Roster for AS Roma (id=104) --
+  Players returned: 25
+  Sample rows:
+[
+  {
+    "id": "206587",
+    "uid": "s:600~a:206587",
+    "guid": "bb5d723e-138b-a776-8fce-22a7957d8fe8",
+    "firstName": "Pierluigi",
+    "lastName": "Gollini",
+    "fullName": "Pierluigi Gollini",
+    "displayName": "Pierluigi Gollini",
+    "shortName": "P. Gollini",
+    "weight": 205,
+    "displayWeight": "205 lbs",
+    "height": 76,
+    "displayHeight": "6' 4\"",
+    "age": 31,
+    "dateOfBirth": "1995-03-18T08:00Z",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/206587/pierluigi-gollini",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/206587/pierluigi-gollini",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:206587&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/206587/pierluigi-gollini",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/206587/pierluigi-gollini",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:206587&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/206587/pierluigi-gollini",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:206587&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/206587/pierluigi-gollini",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:206587&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/206587/pierluigi-gollini",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:206587",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/206587/pierluigi-gollini",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/206587/pierluigi-gollini",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Italy",
+    "citizenshipCountry": {
+      "alternateId": "10",
+      "abbreviation": "ITA"
+    },
+    "slug": "pierluigi-gollini",
+    "jersey": "95",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "alt": "Italy",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ita.1/athletes/206587/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/206587/leagues?lang=en&region=us"
+    },
+    "transactions": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/206587/transactions?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/206587/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ita.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/104?lang=en&region=us"
+    }
+  },
+  {
+    "id": "234300",
+    "uid": "s:600~a:234300",
+    "guid": "f2f39060-b5ea-bef1-34e7-cc01ed455f92",
+    "firstName": "Devis",
+    "lastName": "Vásquez",
+    "fullName": "Devis Vásquez",
+    "displayName": "Devis Vásquez",
+    "shortName": "D. Vásquez",
+    "weight": 203,
+    "displayWeight": "203 lbs",
+    "height": 77,
+    "displayHeight": "6' 5\"",
+    "age": 28,
+    "dateOfBirth": "1998-05-12T07:00Z",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/234300/devis-vasquez",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/234300/devis-vasquez",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:234300&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/234300/devis-vasquez",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/234300/devis-vasquez",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:234300&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/234300/devis-vasquez",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:234300&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/234300/devis-vasquez",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:234300&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/234300/devis-vasquez",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:234300",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/234300/devis-vasquez",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/234300/devis-vasquez",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Colombia",
+    "citizenshipCountry": {
+      "alternateId": "23",
+      "abbreviation": "COL"
+    },
+    "slug": "devis-vasquez",
+    "jersey": "32",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+      "alt": "Colombia",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ita.1/athletes/234300/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/234300/leagues?lang=en&region=us"
+    },
+    "transactions": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/234300/transactions?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/234300/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ita.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/104?lang=en&region=us"
+    }
+  }
+]
+
+=== BUNDESLIGA (ger.1) ===
+Teams returned: 18
+
+  -- Roster for 1. FC Union Berlin (id=598) --
+  Players returned: 32
+  Sample rows:
+[
+  {
+    "id": "165424",
+    "uid": "s:600~a:165424",
+    "guid": "23ccc0f5-ea2c-3619-0591-4333514aaf26",
+    "firstName": "Frederik",
+    "lastName": "Ronnow",
+    "fullName": "Frederik Ronnow",
+    "displayName": "Frederik Ronnow",
+    "shortName": "F. Ronnow",
+    "weight": 179,
+    "displayWeight": "179 lbs",
+    "height": 74,
+    "displayHeight": "6' 2\"",
+    "age": 34,
+    "dateOfBirth": "1992-08-04T07:00Z",
+    "pronunciation": "FRED-eh-rik RON-ow",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/165424/frederik-ronnow",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/165424/frederik-ronnow",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:165424&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/165424/frederik-ronnow",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/165424/frederik-ronnow",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:165424&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/165424/frederik-ronnow",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:165424&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/165424/frederik-ronnow",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:165424&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/165424/frederik-ronnow",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:165424",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/165424/frederik-ronnow",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/165424/frederik-ronnow",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Denmark",
+    "citizenshipCountry": {
+      "alternateId": "5",
+      "abbreviation": "DEN"
+    },
+    "slug": "frederik-ronnow",
+    "jersey": "1",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/den.png",
+      "alt": "Denmark",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 2,
+                "displayValue": "2"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 12,
+                "displayValue": "12"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 7,
+                "displayValue": "7"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ger.1/athletes/165424/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/165424/leagues?lang=en&region=us"
+    },
+    "transactions": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/165424/transactions?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/165424/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ger.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/598?lang=en&region=us"
+    }
+  },
+  {
+    "id": "221460",
+    "uid": "s:600~a:221460",
+    "guid": "8720eabc-9a31-0c31-08d4-2bbae6f79399",
+    "firstName": "Carl",
+    "middleName": "",
+    "lastName": "Klaus",
+    "fullName": "Carl Klaus",
+    "displayName": "Carl Klaus",
+    "shortName": "C. Klaus",
+    "weight": 190,
+    "displayWeight": "190 lbs",
+    "height": 74,
+    "displayHeight": "6' 2\"",
+    "age": 32,
+    "dateOfBirth": "1994-01-16T08:00Z",
+    "pronunciation": "KARL KLOWS",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/221460/carl-klaus",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/221460/carl-klaus",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:221460&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/221460/carl-klaus",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/221460/carl-klaus",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:221460&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/221460/carl-klaus",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:221460&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/221460/carl-klaus",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:221460&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/221460/carl-klaus",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:221460",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/221460/carl-klaus",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/221460/carl-klaus",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Germany",
+    "citizenshipCountry": {
+      "alternateId": "8",
+      "abbreviation": "GER"
+    },
+    "slug": "carl-klaus",
+    "jersey": "25",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "alt": "Germany",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ger.1/athletes/221460/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/221460/leagues?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/221460/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ger.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/598?lang=en&region=us"
+    }
+  }
+]
+
+  -- Roster for Bayer Leverkusen (id=131) --
+  Players returned: 27
+  Sample rows:
+[
+  {
+    "id": "161825",
+    "uid": "s:600~a:161825",
+    "guid": "3701bb67-4124-6688-8c21-0ad66c54a9b4",
+    "firstName": "Janis",
+    "lastName": "Blaswich",
+    "fullName": "Janis Blaswich",
+    "displayName": "Janis Blaswich",
+    "shortName": "J. Blaswich",
+    "weight": 192,
+    "displayWeight": "192 lbs",
+    "height": 76,
+    "displayHeight": "6' 4\"",
+    "age": 35,
+    "dateOfBirth": "1991-05-02T07:00Z",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/161825/janis-blaswich",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/161825/janis-blaswich",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:161825&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/161825/janis-blaswich",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/161825/janis-blaswich",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:161825&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/161825/janis-blaswich",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:161825&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/161825/janis-blaswich",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:161825&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/161825/janis-blaswich",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:161825",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/161825/janis-blaswich",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/161825/janis-blaswich",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Germany",
+    "citizenshipCountry": {
+      "alternateId": "8",
+      "abbreviation": "GER"
+    },
+    "slug": "janis-blaswich",
+    "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/soccer/players/full/161825.png",
+      "alt": "Janis Blaswich"
+    },
+    "jersey": "28",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "alt": "Germany",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "statistics": {
+      "splits": {
+        "id": "0",
+        "name": "Total",
+        "abbreviation": "Total",
+        "type": "total",
+        "categories": [
+          {
+            "name": "general",
+            "displayName": "General",
+            "shortDisplayName": "General",
+            "abbreviation": "gen",
+            "summary": "",
+            "stats": [
+              {
+                "name": "foulsCommitted",
+                "displayName": "Fouls Committed",
+                "shortDisplayName": "FC",
+                "description": "The number of fouls comitted by a player or team.",
+                "abbreviation": "FC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsSuffered",
+                "displayName": "Fouls Suffered",
+                "shortDisplayName": "FA",
+                "description": "The number of fouls suffered by a player or team.",
+                "abbreviation": "FA",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "redCards",
+                "displayName": "Red Cards",
+                "shortDisplayName": "RC",
+                "description": "The number of red cards that have been issued.",
+                "abbreviation": "RC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "yellowCards",
+                "displayName": "Yellow Cards",
+                "shortDisplayName": "YC",
+                "description": "The number of yellow cards accumulated.",
+                "abbreviation": "YC",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "ownGoals",
+                "displayName": "Own Goals",
+                "shortDisplayName": "OG",
+                "description": "The number of own goals conceded.",
+                "abbreviation": "OG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "appearances",
+                "displayName": "Appearances",
+                "shortDisplayName": "APP",
+                "description": "The number of times a player has made an appearance in a match.",
+                "abbreviation": "APP",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "subIns",
+                "displayName": "Substitute Appearances",
+                "shortDisplayName": "SUBIN",
+                "description": "The number of times a player has come on a sub in a match.",
+                "abbreviation": "SUB",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "offensive",
+            "displayName": "Offensive",
+            "shortDisplayName": "Offensive",
+            "abbreviation": "off",
+            "summary": "",
+            "stats": [
+              {
+                "name": "goalAssists",
+                "displayName": "Assists",
+                "shortDisplayName": "A",
+                "description": "The number of assists.",
+                "abbreviation": "A",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "offsides",
+                "displayName": "Offsides",
+                "shortDisplayName": "OF",
+                "description": "The number of times a player or team gets caught offside.",
+                "abbreviation": "OF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsOnTarget",
+                "displayName": "Shots On Goal",
+                "shortDisplayName": "SOG",
+                "description": "The number of shots that are on goal.",
+                "abbreviation": "SOG",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalShots",
+                "displayName": "Shots",
+                "shortDisplayName": "SHOT",
+                "description": "The number of shots attempted.",
+                "abbreviation": "SHOT",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "totalGoals",
+                "displayName": "Total Goals",
+                "shortDisplayName": "G",
+                "description": "The number of goals scored against the opposing team.",
+                "abbreviation": "G",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          },
+          {
+            "name": "goalKeeping",
+            "displayName": "Goal Keeping",
+            "shortDisplayName": "Goal Keeping",
+            "abbreviation": "gk",
+            "summary": "",
+            "stats": [
+              {
+                "name": "saves",
+                "displayName": "Saves",
+                "shortDisplayName": "SV",
+                "description": "The number of times a goalkeeper makes a save.",
+                "abbreviation": "SV",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "shotsFaced",
+                "displayName": "Shots Faced",
+                "shortDisplayName": "SHF",
+                "description": "The number of shots on target a goalkeeper has faced.",
+                "abbreviation": "SHF",
+                "value": 0,
+                "displayValue": "0"
+              },
+              {
+                "name": "goalsConceded",
+                "displayName": "Goals Against",
+                "shortDisplayName": "GA",
+                "description": "The number of goals allowed by the goalkeeper.",
+                "abbreviation": "GA",
+                "value": 0,
+                "displayValue": "0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ger.1/athletes/161825/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/161825/leagues?lang=en&region=us"
+    },
+    "transactions": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/161825/transactions?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/161825/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ger.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/131?lang=en&region=us"
+    }
+  },
+  {
+    "id": "175069",
+    "uid": "s:600~a:175069",
+    "guid": "2b152582-67a6-b9b0-9194-df6d4312443a",
+    "firstName": "Niklas",
+    "lastName": "Lomb",
+    "fullName": "Niklas Lomb",
+    "displayName": "Niklas Lomb",
+    "shortName": "N. Lomb",
+    "weight": 183,
+    "displayWeight": "183 lbs",
+    "height": 73,
+    "displayHeight": "6' 1\"",
+    "age": 33,
+    "dateOfBirth": "1993-07-28T07:00Z",
+    "pronunciation": "NIK-las LOMB",
+    "gender": "MALE",
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "playercard",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/175069/niklas-lomb",
+        "text": "Player Card",
+        "shortText": "Player Card",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/stats/_/id/175069/niklas-lomb",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "stats",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:175069&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "splits",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/splits/_/id/175069/niklas-lomb",
+        "text": "Splits",
+        "shortText": "Splits",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/matches/_/id/175069/niklas-lomb",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "gamelog",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:175069&section=gamelog",
+        "text": "Matches",
+        "shortText": "Matches",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/news/_/id/175069/niklas-lomb",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "news",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:175069&section=news",
+        "text": "News",
+        "shortText": "News",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/bio/_/id/175069/niklas-lomb",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "bio",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:175069&section=bio",
+        "text": "Bio",
+        "shortText": "Bio",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/_/id/175069/niklas-lomb",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "overview",
+          "sportscenter",
+          "app",
+          "athlete"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~a:175069",
+        "text": "Overview",
+        "shortText": "Overview",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "desktop",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/175069/niklas-lomb",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "transfers",
+          "mobile",
+          "athlete"
+        ],
+        "href": "https://www.espn.com/soccer/player/transfers/_/id/175069/niklas-lomb",
+        "text": "Transfers",
+        "shortText": "Transfers",
+        "isExternal": false,
+        "isPremium": false
+      }
+    ],
+    "birthPlace": {},
+    "citizenship": "Germany",
+    "citizenshipCountry": {
+      "alternateId": "8",
+      "abbreviation": "GER"
+    },
+    "slug": "niklas-lomb",
+    "jersey": "36",
+    "flag": {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "alt": "Germany",
+      "rel": [
+        "country-flag"
+      ]
+    },
+    "position": {
+      "id": "1",
+      "name": "Goalkeeper",
+      "displayName": "Goalkeeper",
+      "abbreviation": "G",
+      "leaf": false
+    },
+    "injuries": [],
+    "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+    },
+    "seasons": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ger.1/athletes/175069/seasons?lang=en&region=us"
+    },
+    "leagues": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/175069/leagues?lang=en&region=us"
+    },
+    "transactions": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/175069/transactions?lang=en&region=us"
+    },
+    "events": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/athletes/175069/events?lang=en&region=us"
+    },
+    "defaultLeague": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/leagues/ger.1?lang=en&region=us"
+    },
+    "profiled": false,
+    "defaultTeam": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/soccer/teams/131?lang=en&region=us"
+    }
+  }
+]
